@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head><style> body {
+  background-color:#1B1B1B;
+  color:#f5f0f0;
+  font-size:30px;
+  button {
+    color:#f5f0f0;
+    background-color:#f5f0f0;
+  }
+  p {
+  text-align:center;
+  margin:5px;
+  }
+}</style></head>
+<body>
+  <script>
+  /*ask playa 1 for a number between 1 and 4
+  ask playa 2 for a number between 1 and 4
+  tell a brotha if they tell a number outside of the range then end the game
+  // if the player one and 2's numbers are the same there fore they win
+  else if it is wrong then tell players they are wrong
+  */
+  function playGame() {
+    
+  
+  var p1 = prompt("guess a number between 1 and 4);
+  var p2 = (Math.floor(Math.random()*4 + 1));
+  if ((p1 < 1 || p1 > 4 ) || (p2 < 1 || p2 > 4)){
+    window.alert("Wrong number detected, exiting! ( if correct then the computer is dumb pls fix)");
+    return;
+  }
+  if (p1 == p2){
+    window.alert("You Lost!");
+  }
+  else {
+    window.alert("You both win! Player 1 chose " + p1 + " and player 2 chose" + p2);
+  }
+	</script>
+	}
+2 player guessting game!!!!
+<p><button onclick="playGame()">klik 2 play</button></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h
+
+</body>
+</html>

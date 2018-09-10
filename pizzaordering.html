@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head><style> body {
+  background-color:#1B1B1B;
+  color:#f5f0f0;
+  font-size:30px;
+  margin:center;
+  text-align:center;
+  
+  button {
+    color:#f5f0f0;
+    background-color:#f5f0f0;
+  }
+    /* p {
+    color:orange;
+  }
+  #showResults {
+    color:orange;
+  }
+  */
+}</style></head>
+<body>
+  <script>
+  var pizza = {
+    dough:["wheat","flat bread","thin","pan","deep dish"],
+    sauce:["marinara","bbq","honey mustard","alfredo"],
+    meats: ["meatballs","pepperoni","chichen","bacon"],
+    veg: ["mushrooms","onions","basil","broccoli","potato"],
+    cheese: ["pepperjack","provolone","mozzarella","chedder","american"],
+    square:false,
+    hexagon:false,
+    price: 20,
+    slices:8
+  }
+  function randoPizza() {
+    var rDough = Math.floor(Math.random()* pizza.dough.length);
+    var rMeats = Math.floor(Math.random()* pizza.meats.length);
+    var rVeg = Math.floor(Math.random()* pizza.veg.length);
+    var rCheese = Math.floor(Math.random()* pizza.cheese.length);
+    var rSauce = Math.floor(Math.random()* pizza.sauce.length);
+    var askSquare = prompt("would you like a 4 sided pizza? y or n?");
+    askSquare.toLowerCase();
+    if ((askSquare === "y") && (pizza.square === false)) {
+      document.getElementById('showResults').innerhtml = "What are you ordering?! Cheezits?! No squarepizza 4 u.";
+      return;
+    }
+      var askHex = prompt("Do you want a stop sign pizza?")
+      if ((askSquare === "y") && (pizza.hexagon === false)) {
+      document.getElementById('showResults').innerhtml = "sorry but its time to stop";
+      return;
+    }
+      
+    document.getElementById('showResults').innerHTML = "You are eating a " + pizza.dough[rDough] + " " + pizza.sauce[rSauce] + " " + pizza.meats[rMeats] + " " + pizza.veg[rVeg] + " " + pizza.cheese[rCheese] + " pizza";
+    }
+	</script>
+	
+js period 5
+<p><button onclick="randoPizza()">random pizza</button></p>
+<p id="showResults"></p>
+<p>"if you dont, somebody will"</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
