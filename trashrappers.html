@@ -1,0 +1,25 @@
+<html>
+<body>
+<ul>
+  <li>tromp</li>
+  <li>ra ra rasputin</li>
+  <li>deboss</li>
+  <li>kevin nought</li>
+  </ul>
+  <select id="assholes">
+    <option value="0">tomp</option>
+    <option value="1">put in</option>
+    <option value="2">de_vos</option>
+    <option value="3">kevin noght</option>
+  </select>
+    <button onclick="removeItem()">Remove kebab</button>
+  <script>
+  function removeItem() {
+    var assholes = document.getElementById('assholes').value;
+    var eliminate = document.getElementsByTagName('li')[assholes];
+    var container = eliminate.parentNode;
+    container.removeChild(eliminate);
+  }
+  </script>
+  </body>
+ 
